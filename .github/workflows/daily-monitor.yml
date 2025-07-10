@@ -1,13 +1,13 @@
 name: Daily Repo Monitor
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 时间 00:00 运行
-  workflow_dispatch:       # 允许手动触发
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
-permissions:  # 关键权限设置
-  contents: write  # 启用仓库写入权限
-  issues: write    # 可选：如需创建 issue 请启用
-  pull-requests: write  # 可选：如需 PR 操作请启用
+permissions:  
+  contents: write
+  issues: write
+  pull-requests: write
 
 jobs:
   monitor:
